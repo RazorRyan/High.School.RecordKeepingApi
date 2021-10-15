@@ -1,30 +1,28 @@
 ﻿using High.School.RecordKeepingApi.Models;
-using System;
+using High.School.RecordKeepingApi.ViewModels;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace High.School.RecordKeepingApi.Data
 {
     public class DataMock
     {
-        public List<StudentViewModel> studentVMList => new List<StudentViewModel>()
+        public List<StudentModel> studentVMList => new List<StudentModel>()
         {
-            new StudentViewModel()
+            new StudentModel()
             {
                 FirstName = "Ryan",
                 LastName = "Blah",
                 DOB = "1988/05/25",
                 Year = "2000",
             },
-            new StudentViewModel()
+            new StudentModel()
             {
                 FirstName = "Tesrt",
                 LastName = "dsfdds",
                 DOB = "2005/05/25",
                 Year = "2011",
             },
-            new StudentViewModel()
+            new StudentModel()
             {
                 FirstName = "hey",
                 LastName = "ho",
@@ -34,21 +32,21 @@ namespace High.School.RecordKeepingApi.Data
         };
 
 
-        public List<SubjectViewModel> subjectVMList => new List<SubjectViewModel>()
+        public List<SubjectModel> subjectVMList => new List<SubjectModel>()
         {
-            new SubjectViewModel()
+            new SubjectModel()
             {
                 Name="Economics",
                 Code="ECO001",
                 Level="1"
             },
-            new SubjectViewModel()
+            new SubjectModel()
             {
                 Name="Science",
                 Code="SCC001",
                 Level="1"
             },
-            new SubjectViewModel()
+            new SubjectModel()
             {
                 Name="Economics",
                 Code="ECO002",
@@ -79,9 +77,9 @@ namespace High.School.RecordKeepingApi.Data
         };
 
 
-        public List<SubjectResultViewModel> subjectResultVMList => new List<SubjectResultViewModel>()
+        public List<SubjectResultModel> subjectResultVMList => new List<SubjectResultModel>()
         {
-            new SubjectResultViewModel()
+            new SubjectResultModel()
             {
                 StudentName = "Hello I wanna know",
                 SubjectName = "ECONOMICS",
