@@ -1,0 +1,6 @@
+
+See : https://dev.to/alrobilliard/deploying-net-core-to-heroku-1lfe
+heroku container:login
+docker build -t highschoolrecordkeepingapi .
+heroku container:push -a highschoolrecordkeepingapi web
+heroku container:release -a highschoolrecordkeepingapi web

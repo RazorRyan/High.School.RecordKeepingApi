@@ -33,6 +33,15 @@ namespace High.School.RecordKeepingApi
         {
             services.AddControllers();
 
+            services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
+            {
+                builder
+                  .AllowAnyOrigin()
+                 .AllowAnyMethod()
+                 .AllowAnyHeader()
+                 .AllowCredentials();
+            }));
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo
@@ -72,6 +81,8 @@ namespace High.School.RecordKeepingApi
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            app.UseCors("MyPolicy");
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

@@ -22,4 +22,5 @@ RUN dotnet publish "High.School.RecordKeepingApi.csproj" -c Release -o /app/publ
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "High.School.RecordKeepingApi.dll"]
+#ENTRYPOINT ["dotnet", "High.School.RecordKeepingApi.dll"]
+CMD ASPNETCORE_URLS=http://*:$PORT dotnet High.School.RecordKeepingApi.dll
