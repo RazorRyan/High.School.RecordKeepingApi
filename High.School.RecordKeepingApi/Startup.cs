@@ -36,10 +36,9 @@ namespace High.School.RecordKeepingApi
             services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
             {
                 builder
-                  .AllowAnyOrigin()
+                 .AllowAnyOrigin()
                  .AllowAnyMethod()
-                 .AllowAnyHeader()
-                 .AllowCredentials();
+                 .AllowAnyHeader();
             }));
 
             services.AddSwaggerGen(c =>

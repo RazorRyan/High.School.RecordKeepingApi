@@ -1,5 +1,6 @@
 ﻿using High.School.RecordKeepingApi.Models;
 using High.School.RecordKeepingApi.RepositoryService;
+using High.School.RecordKeepingApi.ViewModels;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -15,7 +16,7 @@ using System.Threading.Tasks;
 namespace High.School.RecordKeepingApi.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class StudentResultsController : ControllerBase
     {
         private readonly ILogger<StudentResultsController> _logger;
